@@ -1,0 +1,76 @@
+/* Todoitem.css */
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #cf1b1b; */
+  background-color: #27ccc4;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeInItem 0.5s ease;
+}
+
+.todo-item.completed {
+  background-color: #e0ffe0;
+}
+
+.todo-item:hover {
+  transform: scale(1.02);
+}
+
+.todo-item h5 {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 16px;
+  color: #0c0c0c;
+  cursor: pointer;
+}
+
+.todo-item.completed h5 {
+  color: #999;
+}
+.complete-button {
+  background-color: rgb(245, 229, 3);
+  color: rgb(20, 20, 20);
+  font-weight: bold;
+}
+.todo-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-buttons button {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-buttons button:hover {
+  background-color: #ddd;
+}
+
+.todo-buttons .delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.todo-buttons .delete-button:hover {
+  background-color: #c82333;
+}
+
+@keyframes fadeInItem {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
