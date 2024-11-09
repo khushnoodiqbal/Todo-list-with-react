@@ -20,6 +20,7 @@
 
 .todo-item:hover {
   transform: scale(1.02);
+  background-color: #53a1c0ea;
 }
 
 .todo-item h5 {
